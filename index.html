@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JeongJinyeong Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5883ecd5fb.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="vscode_app">
+        <aside class="sidebar" id="mySidebar">
+            <div class="explorer_head">
+                <span>エクスプローラー</span>
+                <button onclick="toggleSidebar()" style="background:none; border:none; color:#858585; cursor:pointer; font-size:16px;">
+            <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div class="file_list">
+                <div class="file" onclick="openFile('profile')"><i class="fa-regular fa-circle-user"></i>Profile</div>
+                <div class="file" onclick="openFile('projects')"><i class="fa-regular fa-object-ungroup"></i>Projects</div>
+                <div class="file" onclick="openFile('contact')"><i class="fa-regular fa-envelope"></i>Contact</div>
+            </div>
+        </aside>
+
+        <div class="resizer" id="resizer"></div>
+
+        <main class="main_editor">
+            <!-- 모바일 전용 메뉴 버튼 (PC에선 숨김 처리 가능) -->
+            <div class="mobile_menu" style="display: none; padding: 10px; background: #252526;">
+                <button onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="tab_bar"></div>
+            <div class="editor_wrapper" id="editor_wrapper"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
